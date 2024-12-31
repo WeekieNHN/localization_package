@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://4jl2yaslytps"]
+
+[ext_resource type="Script" path="res://addons/localization_package/Commands/Shuffle Lang/shuffle_lang.gd" id="1_8ybbd"]
+
+[node name="ShuffleLang" type="Node"]
+script = ExtResource("1_8ybbd")
+command = "shuffle_lang"
+help_text = "Continuously changes the game's language to check in-game string lengths and appearances."
+help_text_short = "Shuffle through game languages."

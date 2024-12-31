@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://davfi3xogsh02"]
+
+[ext_resource type="Script" path="res://addons/localization_package/Commands/Set Lang/set_lang.gd" id="1_igy2y"]
+
+[node name="SetLang" type="Node"]
+script = ExtResource("1_igy2y")
+command = "set_lang"
+help_text = "Type `set_lang <language code>` to translate the game to that language."
+help_text_short = "Sets the game's Language."
