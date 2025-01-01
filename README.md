@@ -17,9 +17,9 @@ The Global Autoload localization_manager.gd should be enabled when the plugin is
 
 ### Commands
 
-If you **do not** want to integrate with the [The Debug/Developer Console](https://github.com/WeekieNHN/GodotDevConsole), just delete `addons/localization_package/commands`. It will throw a compilation error on import if you do not have the console plugin installed.
+If you **do not** want to integrate with the [The Debug/Developer Console](https://github.com/WeekieNHN/GodotDevConsole), delete the `addons/localization_package/commands` folder, and remove the `LocalizationCommands` node from `addons/localization_package/Autoloads/localization_manager.tscn`. It will throw a compilation error on import if you do not have the console plugin installed.
 
-If **do** want to integrate with the console. You'll need to add the scenes from the command folder under the console scene's `Commands` node. See the README for the console for more information on adding commands.
+If **do** want to integrate with the console: Just leave everything as is.
 
 ## Demo
 
