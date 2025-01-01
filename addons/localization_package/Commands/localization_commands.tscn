@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://jkfl42nmii5t"]
+
+[ext_resource type="Script" path="res://addons/dev_console/Commands/command_aggregator.gd" id="1_ogih6"]
+[ext_resource type="PackedScene" uid="uid://davfi3xogsh02" path="res://addons/localization_package/Commands/Set Lang/set_lang.tscn" id="2_s5kap"]
+[ext_resource type="PackedScene" uid="uid://4jl2yaslytps" path="res://addons/localization_package/Commands/Shuffle Lang/shuffle_lang.tscn" id="3_daog7"]
+
+[node name="Commands" type="Node"]
+script = ExtResource("1_ogih6")
+
+[node name="SetLang" parent="." instance=ExtResource("2_s5kap")]
+
+[node name="ShuffleLang" parent="." instance=ExtResource("3_daog7")]

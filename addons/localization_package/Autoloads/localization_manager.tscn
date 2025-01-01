@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dysivj472wgq4"]
+
+[ext_resource type="Script" path="res://addons/localization_package/Autoloads/localization_manager.gd" id="1_ndnay"]
+[ext_resource type="PackedScene" uid="uid://jkfl42nmii5t" path="res://addons/localization_package/Commands/localization_commands.tscn" id="2_obu6u"]
+
+[node name="LocalizationManager" type="Node"]
+script = ExtResource("1_ndnay")
+
+[node name="LocalizationCommands" parent="." instance=ExtResource("2_obu6u")]
