@@ -13,7 +13,7 @@ Under `addons/localization_package/Translations` there should be a .csv file and
 
 ### Enabling plugin/autoload
 
-The Global Autoload localization_manager.gd should be enabled when the plugin is activated but confirm that it is in `Project->Project Settings->Globals`.
+The Global Autoload `localization_manager.tscn` should be enabled when the plugin is activated but confirm that it is in `Project->Project Settings->Globals`.
 
 ### Commands
 
