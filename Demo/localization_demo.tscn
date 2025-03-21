@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cid4nvkuw7qow"]
 
-[ext_resource type="Script" path="res://addons/localization_package/Demo/label_script_text.gd" id="1_lvcsx"]
+[ext_resource type="Script" uid="uid://kifrxh7vywng" path="res://addons/localization_package/Scripts/label_script_text.gd" id="1_lvcsx"]
 
 [node name="LocalizationDemo" type="Control"]
 layout_mode = 3
@@ -78,3 +78,5 @@ grow_vertical = 0
 text = "You can also set translated text through script:"
 horizontal_alignment = 1
 script = ExtResource("1_lvcsx")
+text_string = "You can also set translated text through script: %s."
+key_list = Array[String](["CONTEXT_CLASS_PIRATE"])

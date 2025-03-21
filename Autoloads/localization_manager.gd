@@ -1,5 +1,6 @@
 extends Node
 
+signal on_locale_changed()
 
 ## returns list of files at given path recursively
 ## [br]taken from - https://gist.github.com/hiulit/772b8784436898fd7f942750ad99e33e
@@ -29,6 +30,10 @@ func get_all_files(path: String, file_ext := "", files : Array[String] = []) -> 
 		print("[get_all_files()] An error occurred when trying to access %s." % path)
 	return files
 
+func _ready() -> void:
+	# Connect timer timeout to check locale
+	$LocaleCheckTimer.timeout.connect(check_locale_change)
+
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:
 	# Get all of our translation files
@@ -43,3 +48,11 @@ func _init() -> void:
 	
 	# Set locale to the OS location to refresh everything
 	TranslationServer.set_locale(OS.get_locale())
+
+var prev_locale: String = ""
+func check_locale_change() -> void:
+	# Skip if locale hasn't changed
+	if TranslationServer.get_locale() == prev_locale: return
+	# Otherwise, save locale and emit signal
+	prev_locale = TranslationServer.get_locale()
+	on_locale_changed.emit()
